@@ -16,6 +16,7 @@ html, body{
     height: 100%;
     top: 0;
     left: 0;
+    background-color: cornflowerblue;
 }
 
 .appWrap{
@@ -24,7 +25,13 @@ width: 50%;
 max-width: 500px;
 min-width: 300px;
 vertical-align: middle;
+text-align: initial;
+padding: 50px;
+    box-sizing: border-box;
+    border-radius: 20px;
+    background-color: white;
 }
+
 span.blank{
   height: 100%;
   display: inline-block;
@@ -37,6 +44,9 @@ input {
     border: 1px solid lightgray;
     height:40px;
     border-radius: 10px;
+    padding-left:10px;
+    box-sizing: border-box;
+    width:80%;
 }
 
 .inputAd,
@@ -53,10 +63,12 @@ margin: 10px 0;
 }
 
 .btn{
-  height:33px;
+  height:40px;
   margin:5px 0;
   line-height:30px;
   padding:0px 10px;
+  border-radius: 10px;
+  border:1px solid lightgray;
 }
 
 .right_password{
@@ -72,4 +84,10 @@ margin: 10px 0;
 }
 .show{
   display: block;
+}
+
+div.title{
+  font-weight: 600;
+
+
 }

@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import Input from './input';
 import './App.css';
 import DaumPostcode from 'react-daum-postcode';
+import Title from './title'
 
 function App() {
 
@@ -15,9 +16,9 @@ function App() {
         txtAd2: '',
         txtAd1: '',
         txtZip: '',
-        txtPN1:'',
-        txtPN2:'',
-        txtPN3:''
+        txtPN1: '',
+        txtPN2: '',
+        txtPN3: ''
     });
 
     const [displayCheck, setDisplay] = useState({display: 'hide'});
@@ -37,15 +38,11 @@ function App() {
         txtPN3
     } = input;
 
-    const checkdisplay = ()=>{
-        if(display === 'show'){
-            setDisplay({
-                display: 'hide'
-            })
-        }else{
-            setDisplay({
-                display: 'show'
-            })
+    const checkdisplay = () => {
+        if (display === 'show') {
+            setDisplay({display: 'hide'})
+        } else {
+            setDisplay({display: 'show'})
         }
     }
 
@@ -123,50 +120,51 @@ function App() {
         <div className="App">
 
             <div class="inputID">
-                <div>ID</div>
+                <Title title="ID"/>
                 <Input onchange={onchange} name="txtId" value={txtId}/>
                 <button class="btn">ID check</button>
             </div>
             <div class="inputPw">
-                <div>Password</div>
+                <Title title="Password" />
                 <Input type="password" onchange={onchange} name="txtPw1" value={txtPw1}></Input>
-                <br></br>
+                <br/>
                 <Input type="password" onchange={onchange} name="txtPw2" value={txtPw2}></Input>
                 <div class='wrong_password'>{wrong}</div>
                 <div class='right_password'>{right}</div>
             </div>
             <div class="inputName">
-                <div>Name</div>
+                <Title title="Name" />
                 <Input onchange={onchange} name="txtName" value={txtName}></Input>
             </div>
 
             <div class="inputAd">
-                <div>Adress</div>
+                <Title title="Adress" />
+                <button onClick={checkdisplay} class="btn">우편번호 찾기</button>
                 <Input
                     onchange={onchange}
                     name="txtZip"
                     value={txtZip}
                     placeholder="Zip Code"
                     readonly="readonly"></Input>
-                <button onClick={checkdisplay} class="btn">우편번호 찾기</button>
-                <div className={display+" find_zip"}>
+                
+                <div className={display + " find_zip"}>
                     <DaumPostcode onComplete={handleComplete}/>
-                    <br></br>
                 </div>
+                <br/>
                 <Input
                     onchange={onchange}
                     name="txtAd1"
                     value={txtAd1}
                     placeholder="adress1"
                     readonly="readonly"></Input>
-                <br></br>
+                <br/>
                 <Input onchange={onchange} name="txtAd2" value={txtAd2} placeholder="adress2"></Input>
-                <br></br>
+                <br/>
                 <div id="findzip"></div>
 
             </div>
             <div class="inputPn">
-                <div>Phone Number</div>
+                <Title title="Phone Number" />
                 <Input onchange={onchange} name="txtPN1" value={txtPN1}></Input>
                 <span>-</span>
                 <Input onchange={onchange} name="txtPN2" value={txtPN2}></Input>
@@ -174,7 +172,7 @@ function App() {
                 <Input onchange={onchange} name="txtPN3" value={txtPN3}></Input>
             </div>
             <div class="inputPvn">
-                <div>Private Number</div>
+                <Title title="Private Number" />
                 <Input onchange={onchange} name="txtPvn" value=""></Input>
             </div>
             <button onClick={summit} class="btn">summit</button>
