@@ -140,6 +140,11 @@ function App() {
             <div class="inputAd">
                 <Title title="Adress" />
                 <button onClick={checkdisplay} class="btn">우편번호 찾기</button>
+                <div className={display + " find_zip"}>
+                    <div className="zipBox">
+                        <DaumPostcode onComplete={handleComplete} />
+                    </div>
+                </div>
                 <Input
                     onchange={onchange}
                     name="txtZip"
@@ -147,9 +152,7 @@ function App() {
                     placeholder="Zip Code"
                     readonly="readonly"></Input>
                 
-                <div className={display + " find_zip"}>
-                    <DaumPostcode onComplete={handleComplete}/>
-                </div>
+                
                 <br/>
                 <Input
                     onchange={onchange}
@@ -160,7 +163,6 @@ function App() {
                 <br/>
                 <Input onchange={onchange} name="txtAd2" value={txtAd2} placeholder="adress2"></Input>
                 <br/>
-                <div id="findzip"></div>
 
             </div>
             <div class="inputPn">
@@ -175,7 +177,7 @@ function App() {
                 <Title title="Private Number" />
                 <Input onchange={onchange} name="txtPvn" value=""></Input>
             </div>
-            <button onClick={summit} class="btn">summit</button>
+            <button onClick={summit} class="btn summit">Summit</button>
 
         </div>
     );

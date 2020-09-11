@@ -1,15 +1,16 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing: border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-html, body{
-  width:100%;
-  height:100%;
+body,
+html {
+    width: 100%;
+    height: 100%;
 }
 
-#root{
+#root {
     position: absolute;
     text-align: center;
     width: 100%;
@@ -19,75 +20,95 @@ html, body{
     background-color: cornflowerblue;
 }
 
-.appWrap{
-display: inline-block;
-width: 50%;
-max-width: 500px;
-min-width: 300px;
-vertical-align: middle;
-text-align: initial;
-padding: 50px;
+.appWrap {
+    display: inline-block;
+    width: 50%;
+    max-width: 500px;
+    min-width: 300px;
+    vertical-align: middle;
+    text-align: initial;
+    padding: 50px;
     box-sizing: border-box;
     border-radius: 20px;
     background-color: white;
 }
 
-span.blank{
-  height: 100%;
-  display: inline-block;
-  width: 0;
-  vertical-align: middle;
+span.blank {
+    height: 100%;
+    display: inline-block;
+    width: 0;
+    vertical-align: middle;
 }
 input {
     height: 30px;
     margin: 5px 0;
     border: 1px solid lightgray;
-    height:40px;
+    height: 40px;
     border-radius: 10px;
-    padding-left:10px;
+    padding-left: 10px;
     box-sizing: border-box;
-    width:80%;
+    width: 80%;
+
 }
 
 .inputAd,
 .inputID,
+.inputName,
 .inputPn,
-.inputPw,
 .inputPvn,
-.inputName {
-margin: 10px 0;
+.inputPw {
+    margin: 10px 0;
 }
 
-.inputPn input{
-  width:80px;
+.inputPn input {
+    width: 80px;
+
 }
 
-.btn{
-  height:40px;
-  margin:5px 0;
-  line-height:30px;
-  padding:0px 10px;
-  border-radius: 10px;
-  border:1px solid lightgray;
+.btn {
+    height: 40px;
+    margin: 5px 0;
+    line-height: 30px;
+    padding: 0 10px;
+    border-radius: 10px;
+    border: 1px solid lightgray;
 }
 
-.right_password{
-  color:green
+.right_password {
+    color: green;
 }
 
-.wrong_password{
-  color:red
+.wrong_password {
+    color: red;
 }
 
-.hide{
-  display: none;
+.hide {
+    display: none;
 }
-.show{
-  display: block;
+.show {
+    display: block;
 }
 
-div.title{
-  font-weight: 600;
+.find_zip {
+    position: relative;
+    width: 100%;
+}
 
+.zipBox {
+    position: absolute;
+    width: 100%;
 
+}
+
+div.title {
+    font-weight: 600;
+}
+.summit {
+    width: 100%;
+    display: block;
+    margin: 35px auto auto;
+    background-color: cornflowerblue;
+    color: white;
+    border:none;
+    font-size: 16px;
 }
