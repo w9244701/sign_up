@@ -3,9 +3,40 @@
   padding:0;
   box-sizing: border-box;
 }
+
+html, body{
+  width:100%;
+  height:100%;
+}
+
+#root{
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.appWrap{
+display: inline-block;
+width: 50%;
+max-width: 500px;
+min-width: 300px;
+vertical-align: middle;
+}
+span.blank{
+  height: 100%;
+  display: inline-block;
+  width: 0;
+  vertical-align: middle;
+}
 input {
     height: 30px;
     margin: 5px 0;
+    border: 1px solid lightgray;
+    height:40px;
+    border-radius: 10px;
 }
 
 .inputAd,
@@ -34,4 +65,11 @@ margin: 10px 0;
 
 .wrong_password{
   color:red
+}
+
+.hide{
+  display: none;
+}
+.show{
+  display: block;
 }
